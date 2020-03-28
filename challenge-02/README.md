@@ -74,14 +74,13 @@ Crie uma função com as seguintes características:
  {
  if(a !== undefined && b === undefined && c === undefined){
      return a;
- }
- else if(a !== undefined && b !== undefined && c === undefined){
+ } else if(a !== undefined && b !== undefined && c === undefined){
      return a+b;
- }else if(a !== undefined && b !== undefined && c !== undefined){
+ } else if(a !== undefined && b !== undefined && c !== undefined){
      return (a+b) /c
- }else if(a === undefined && b === undefined && c === undefined){
+ } else if(a === undefined && b === undefined && c === undefined){
      return false;
- }else{
+ } else {
      return null;
     }
  }

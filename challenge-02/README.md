@@ -70,8 +70,7 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
- function args(a,b,c)
- {
+ function args(a,b,c) {
  if(a !== undefined && b === undefined && c === undefined){
      return a;
  } else if(a !== undefined && b !== undefined && c === undefined){

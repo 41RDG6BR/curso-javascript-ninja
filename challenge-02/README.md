@@ -44,7 +44,7 @@ Crie uma função com as seguintes características:
 function args(a, b, c){
     if(a === undefined || b === undefined || c === undefined){
         return 'Preencha todos os valores corretamente!'
-    }else{
+    } else {
         return a*b*c + 2
     }
 }

@@ -53,13 +53,13 @@ function args(a, b, c){
 args(1,2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-//'Preencha todos os valores corretamente!'
+// 'Preencha todos os valores corretamente!'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
 args(1, 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-//8
+// 8
 
 /*
 Crie uma função com as seguintes características:
@@ -85,9 +85,9 @@ Crie uma função com as seguintes características:
  }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-args(); //false
-args(1); //1
-args(1, 3) //4
-args(1, 3, 6) //0.6666666666666666
+args(); // false
+args(1); // 1
+args(1, 3) // 4
+args(1, 3, 6) // 0.6666666666666666
 
 ```

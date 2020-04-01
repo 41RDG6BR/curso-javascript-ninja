@@ -7,8 +7,57 @@ um único parâmetro como argumento. Essa função deve retornar `true` se o
 equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
+//boolean representation with arrow (best way!)
+isTruthy = x => !!x
+
+//boolean representation
+var isTruthy = function(x){
+    return !!x;
+}
+//conditional ternary 
+var isTruthy = function(x){
+    return x ? true : false;
+}
+
+//compared with the logic operator === (type && value) 
 function isTruthy(x){
     if(x === true){
+        return true
+    }else{
+        return false
+    }
+}
+
+//comparing just the boolean type
+function isTruthy(x){
+    if(x === true){
+        return true
+    }else{
+        return false
+    }
+}
+
+//compared with the logic operator ! (negation) before the parameter
+function isTruthy(x){
+    if(!x === true){
+        return false
+    }else{
+        return true
+    }
+}
+//compared with the logic operator != (negation) after the parameter
+
+function isTruthy(x){
+    if(x != true){
+        return false
+    }else{
+        return true
+    }
+}
+
+//compared with the logic operator != (negation) after the parameter, considering the type and the value
+function isTruthy(x){
+    if(x !== true){
         return true
     }else{
         return false
@@ -19,7 +68,23 @@ function isTruthy(x){
 isTruthy = x => (x===true)
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-?
+isTruthy = x => (x===true)
+[Function: isTruthy]
+isTruthy(false)
+false
+isTruthy(null)
+false
+isTruthy(undefined)
+false
+isTruthy('')
+false
+isTruthy(0)
+false
+isTruthy(-0)
+false
+isTruthy(NaN)
+false
+
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.

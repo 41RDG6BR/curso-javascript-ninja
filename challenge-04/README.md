@@ -15,6 +15,7 @@ var isTruthy = function(x){
     return !!x;
 }
 //conditional ternary 
+//In the conditinal ternary the ? dot asume the value "if" and the : of "else"
 var isTruthy = function(x){
     return x ? true : false;
 }
@@ -68,28 +69,28 @@ function isTruthy(x){
 isTruthy = x => (x===true)
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy = x => (x===true)
+isTruthy = x => !!x
 [Function: isTruthy]
 isTruthy(false)
-false
+//false
 isTruthy(null)
-false
+//false
 isTruthy(undefined)
-false
+//false
 isTruthy('')
-false
+//false
 isTruthy(0)
-false
+//false
 isTruthy(-0)
-false
+//false
 isTruthy(NaN)
-false
+//false
 
 
 /*
 Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 */
-?
+isTruthy(1,2,3,4,5,6,7,8,9,10)
 
 /*
 Declare uma variável chamada `carro`, atribuindo à ela um objeto com as
@@ -103,18 +104,38 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+var carro = {
+marca: "bmw",
+modelo: "m3",
+placa: "placa",
+ano: 2020,
+cor: "black",
+quantasPortas: 4,
+assentos: 5, 
+quantidadePessoas: 5   
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+var mudarCor = function(){
+    carro.cor = "black-plus"
+}
+
+//with arrow
+mudarCor = () => carro.cor = "black-block"
+
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+var obterCor = function(){
+   return carro.cor 
+}
+
+//arrow
+obterCor = () => carro.cor 
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.

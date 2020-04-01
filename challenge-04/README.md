@@ -68,7 +68,7 @@ function isTruthy(x){
 isTruthy = x => (x===true)
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
-isTruthy = x => (x===true)
+isTruthy = x => !!x
 [Function: isTruthy]
 isTruthy(false)
 false

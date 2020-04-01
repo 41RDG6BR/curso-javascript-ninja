@@ -134,7 +134,7 @@ var obterCor = function(){
    return carro.cor 
 }
 
-//arrow
+//arrow function
 obterCor = () => carro.cor 
 
 /*

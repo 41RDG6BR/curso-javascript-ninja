@@ -115,11 +115,27 @@ assentos: 5,
 quantidadePessoas: 5   
 }
 
+//comment why let, refactoring to AirBnB
+let carro = {
+marca: "bmw",
+modelo: "m3",
+placa: "placa",
+ano: 2020,
+cor: "black",
+quantasPortas: 4,
+assentos: 5, 
+quantidadePessoas: 5   
+}
+
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
 var mudarCor = function(){
+    carro.cor = "black-plus"
+}
+
+let mudarCor = function(){
     carro.cor = "black-plus"
 }
 
@@ -134,6 +150,9 @@ var obterCor = function(){
    return carro.cor 
 }
 
+let obterCor = function(){
+   return carro.cor 
+}
 //arrow function
 obterCor = () => carro.cor 
 
@@ -144,12 +163,19 @@ var obterModelo = function(){
    return carro.modelo 
 }
 
+let obterModelo = function(){
+   return carro.modelo 
+}
 // obterModelo = () => carro.modelo 
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
 var obterMarca = function(){
+   return carro.marca 
+}
+
+let obterMarca = function(){
    return carro.marca 
 }
 
@@ -165,6 +191,9 @@ var obterMarcaModelo = function(){
    return "Esse carro é um " + carro.marca + " " + carro.modelo + "." 
 }
 
+let obterMarcaModelo = function(){
+   return "Esse carro é um " + carro.marca + " " + carro.modelo + "." 
+}
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
 seguintes características:

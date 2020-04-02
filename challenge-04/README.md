@@ -194,6 +194,9 @@ var obterMarcaModelo = function(){
 let obterMarcaModelo = function(){
    return "Esse carro é um " + carro.marca + " " + carro.modelo + "." 
 }
+
+//Em funcoes arrow tanto function quanto return sao declarados implícitamente 
+obterMarcaModelo = () => "Esse carro é um " + carro.marca + " " + carro.modelo + "." 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
 seguintes características:
@@ -210,8 +213,17 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+//revisar se parametros para funcoes estao para challenge 04 ou para challenge 05
+let adicionarPassaeiros = function(passageiros){
+    return carro.passageiros
+}
 
+ let adicionarPessoa203 = function(assentos){
+     if(assentos === 5){
+         return "O carro já está lotado!"
+     }
+        return "Só cabem mais" + carro.pessoa + "pessoas!"
+ }
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),

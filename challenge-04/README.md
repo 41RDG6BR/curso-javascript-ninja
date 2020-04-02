@@ -214,13 +214,18 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 //revisar se parametros para funcoes estao para challenge 04 ou para challenge 05
- let adicionarPassaeiros08 = function(carro){
-     if(carro.assentos % quantidadePessoas === 0){
+ let adicionarPessoas = function( numeroPessoas ){
+    var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+     if( carro.quantidadePessoas === carro.assentos ){
         return "O carro já está lotado!"
-     } else if(carro.assentos - carro.quantidadePessoas < 5){         
+     }
+     if ( totalPessoas > carro.assentos ){         
         return "Só cabem mais" + carro.pessoa + "pessoas!"
      }
+     carro.quantidadePessoas += numeroPessoas;
+     return "Já temos" + totalPessoas + " pessoas no carro!"
  }
+ 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),

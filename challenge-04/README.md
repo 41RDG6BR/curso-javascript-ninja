@@ -215,10 +215,9 @@ citado acima, no lugar de "pessoas".
 */
 //revisar se parametros para funcoes estao para challenge 04 ou para challenge 05
  let adicionarPassaeiros08 = function(carro){
-     if(carro.assentos - carro.quantidadePessoas < 5){
+     if(carro.assentos % quantidadePessoas === 0){
         return "O carro já está lotado!"
-     } else {
-         carro.assentos % quantidadePessoas
+     } else if(carro.assentos - carro.quantidadePessoas < 5){         
         return "Só cabem mais" + carro.pessoa + "pessoas!"
      }
  }

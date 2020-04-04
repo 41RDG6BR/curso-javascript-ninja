@@ -216,16 +216,17 @@ citado acima, no lugar de "pessoas".
 //revisar se parametros para funcoes estao para challenge 04 ou para challenge 05
 carro.adicionarPessoas = function( numeroPessoas ) {
     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
-    if(carro.quantidadePessoas === carro.assentos ){
+    if(carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos ){
         return ' o carro esta lotado!';
     }
 
     if( totalPessoas > carro.assentos) {
-          var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
-        return "Só cabem mais" + quantasPessoasCabem + pluralOuSingular + "!";
+        var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas
+        var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
+        return "Só cabem mais " + quantasPessoasCabem + pluralOuSingular + "!";
     }
     carro.quantidadePessoas += numeroPessoas;
-    return 'Já temos ' + totalPessoas + ' pessoa no carro';
+        return 'Já temos ' + totalPessoas + ' pessoa no carro';
 }
 
 //  let adicionarPessoas = function( numeroPessoas ){
@@ -233,12 +234,8 @@ carro.adicionarPessoas = function( numeroPessoas ) {
 //      if( carro.quantidadePessoas === carro.assentos ){
 //         return "O carro já está lotado!"
 //      }
-//      if ( totalPessoas > carro.assentos ){   
-//          var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
-//         return "Só cabem mais" + quantasPessoasCabem + pluralOuSingular + "!";
-//      }
-//      carro.quantidadePessoas += numeroPessoas;
-//      return "Já temos" + carro.quantidadePessoas + " pessoas no carro!"
+//     carro.quantidadePessoas += numeroPessoas;
+//     return 'Já temos ' + totalPessoas + ' pessoa no carro';
 //  }
 
 /*
@@ -249,7 +246,7 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.cor //black
+carro.cor //black-plus
 
 // Mude a cor do carro para vermelho.
 let mudarCor = function(){
@@ -260,7 +257,7 @@ let mudarCor = function(){
 carro.cor //vermelho
 
 // Mude a cor do carro para verde musgo.
-let mudarCor = function(){
+let mudarCor3 = function(){
     carro.cor = "verde musgo"
 }
 
@@ -272,20 +269,20 @@ carro.marca //bmw
 carro.modelo //m3
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2) //'Já temos 2 pessoa no carro'
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(4) //'Já temos 6 pessoa no carro'
 
 // Faça o carro encher.
-?
-
+carro.adicionarPessoas(3) //'Já temos 5 pessoas no carro'
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4) //'Já temos 1 pessoas no carro'
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10)
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas //1
+
 ```

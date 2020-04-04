@@ -276,6 +276,7 @@ carro.adicionarPessoas(4) //'Já temos 6 pessoa no carro'
 
 // Faça o carro encher.
 carro.adicionarPessoas(3) //'Já temos 5 pessoas no carro'
+
 // Tire 4 pessoas do carro.
 carro.adicionarPessoas(-4) //'Já temos 1 pessoas no carro'
 

@@ -214,18 +214,33 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 //revisar se parametros para funcoes estao para challenge 04 ou para challenge 05
- let adicionarPessoas = function( numeroPessoas ){
+carro.adicionarPessoas = function( numeroPessoas ) {
     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
-     if( carro.quantidadePessoas === carro.assentos ){
-        return "O carro já está lotado!"
-     }
-     if ( totalPessoas > carro.assentos ){         
-        return "Só cabem mais" + carro.pessoa + "pessoas!"
-     }
-     carro.quantidadePessoas += numeroPessoas;
-     return "Já temos" + totalPessoas + " pessoas no carro!"
- }
- 
+    if(carro.quantidadePessoas === carro.assentos ){
+        return ' o carro esta lotado!';
+    }
+
+    if( totalPessoas > carro.assentos) {
+          var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
+        return "Só cabem mais" + quantasPessoasCabem + pluralOuSingular + "!";
+    }
+    carro.quantidadePessoas += numeroPessoas;
+    return 'Já temos ' + totalPessoas + ' pessoa no carro';
+}
+
+//  let adicionarPessoas = function( numeroPessoas ){
+//     var totalPessoas = carro.quantidadePessoas + numeroPessoas;
+//      if( carro.quantidadePessoas === carro.assentos ){
+//         return "O carro já está lotado!"
+//      }
+//      if ( totalPessoas > carro.assentos ){   
+//          var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
+//         return "Só cabem mais" + quantasPessoasCabem + pluralOuSingular + "!";
+//      }
+//      carro.quantidadePessoas += numeroPessoas;
+//      return "Já temos" + carro.quantidadePessoas + " pessoas no carro!"
+//  }
+
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
@@ -234,22 +249,27 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.cor //black
 
 // Mude a cor do carro para vermelho.
-?
+let mudarCor = function(){
+    carro.cor = "vermelho"
+}
 
 // E agora, qual a cor do carro?
-?
+carro.cor //vermelho
 
 // Mude a cor do carro para verde musgo.
-?
+let mudarCor = function(){
+    carro.cor = "verde musgo"
+}
 
 // E agora, qual a cor do carro?
-?
+carro.cor //verde musgo
 
 // Qual a marca e modelo do carro?
-?
+carro.marca //bmw
+carro.modelo //m3
 
 // Adicione 2 pessoas no carro.
 ?

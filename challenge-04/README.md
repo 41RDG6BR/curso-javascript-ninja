@@ -225,8 +225,9 @@ carro.adicionarPessoas = function( numeroPessoas ) {
         var pluralOuSingular = quantasPessoasCabem === 1 ? " pessoa" : " pessoas";      
         return "Só cabem mais " + quantasPessoasCabem + pluralOuSingular + "!";
     }
+    
     carro.quantidadePessoas += numeroPessoas;
-        return 'Já temos ' + totalPessoas + ' pessoa no carro';
+    return 'Já temos ' + totalPessoas + ' pessoa no carro';
 }
 
 //  let adicionarPessoas = function( numeroPessoas ){

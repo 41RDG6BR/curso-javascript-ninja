@@ -13,7 +13,7 @@ Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
-// ?
+var teams = ['Botafogo', 'Flamengo', 'Fluminense', 'Fortaleza', 'Santos'];
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
@@ -32,21 +32,33 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     os 5 primeiros.
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
-*/
-// ?
+*/ 
+function showTeamPosition( position ) {
+    if(position < 1 || position > 5){
+        return "Não temos a informação do time que está nessa posição."
+    }
+        return "O time que está em " + position +"° lugar é o " + teams[position -1]
+}
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-// ?
+showTeamPosition(5) //'Não temos a informação do time que está nessa posição.'
+showTeamPosition(3) //'O time que está em 3° lugar é o sao paulo'
+showTeamPosition(4) //'O time que está em 4° lugar é o corinthians'
+showTeamPosition(2) //'O time que está em 2° lugar é o palmeiras'
+showTeamPosition(1) //'O time que está em 1° lugar é o atletico'
+
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-// ?
-
+var counter = 20;
+while(counter <= 30){
+    console.log(counter++)
+}
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";

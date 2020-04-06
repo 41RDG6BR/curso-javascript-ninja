@@ -50,7 +50,6 @@ showTeamPosition(4) //'O time que está em 4° lugar é o corinthians'
 showTeamPosition(2) //'O time que está em 2° lugar é o palmeiras'
 showTeamPosition(1) //'O time que está em 1° lugar é o atletico'
 
-
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
@@ -59,6 +58,7 @@ var counter = 20;
 while(counter <= 30){
     console.log(counter++)
 }
+
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";
@@ -71,7 +71,20 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-// ?
+function convertToHex( color ){
+    switch(color){
+        case'red':
+            return 'O hexadecimal para a cor ' + color + ' é #FF0000.';    
+            break;
+        case 'yellow':
+            return 'O hexadecimal para a cor ' + color + ' é #FF0000.';
+            break;
+        case 'blue':
+            return 'O hexadecimal para a cor ' + color + ' é #FF0000.';
+            default:
+            return ('x nao é nem 1 nem 2')
+    }
+}
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.

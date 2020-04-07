@@ -7,7 +7,9 @@ var array = [null, undefined, 01, 'string', true];
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-// ?
+var addItem = function(array) {
+    array.push({JavaScript: 'DevOps'})
+}
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3

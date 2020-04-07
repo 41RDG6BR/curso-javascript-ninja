@@ -3,7 +3,9 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 `calculateSum`. A função deve receber dois parâmetros e retornar a soma
 desses parâmetros.
 */
-// ?
+var sum = function calculateSum(x, y) {
+  return x + y;
+}
 
 /*
 Invoque a função criada acima, passando dois números que serão somados, e mostre

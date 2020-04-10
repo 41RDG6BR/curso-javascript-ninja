@@ -10,11 +10,11 @@ dentro de `console.log` que estão retornando `undefined` retornem o valor
 correto da variável ou função chamada.
 */
 function myFunction() {
+    var number1 = 10;
+    var number2 = 20;
+    return number1 + number2;
     console.log( 'Na função `myFunction`, o primeiro número é', number1 );
     console.log( 'Na função `myFunction`, o segundo número é', number2 );
-    var number1 = 10;
-    return number1 + number2;
-    var number2 = 20;
 }
 myFunction();
 

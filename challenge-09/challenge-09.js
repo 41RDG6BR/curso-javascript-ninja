@@ -91,11 +91,18 @@ let calculator = ( x, y ) => callback( x, y )
 console.log( 'O resultado da soma é: ' + sum(callback) );
 
 /*
-Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
+Agora declare outras variáveis chamadas `subtraction`, `multiplication`,
 `division` e `mod`, e atribua à elas `calculator`, passando números
 diferentes para cada chamada.
 */
 // ?
+let subtraction = calculator(303, 404)
+
+let multiplication = calculator(305, 405)
+
+let division = calculator(306, 406)
+
+let mod = calculator(36, 46)
 
 /*
 Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -104,14 +111,14 @@ divisão e módulo (resto de divisão), conforme a função utilizada.
 As suas respostas devem estar abaixo dos `console.log` referentes à cada
 chamada.
 */
-console.log( 'O resultado da subtração é:' );
 // ?
+console.log( 'O resultado da subtração é:' + subtraction(callback) );
 
-console.log( 'O resultado da multiplicação é:' );
 // ?
+console.log( 'O resultado da multiplicação é:' + multiplication(callback) );
 
-console.log( 'O resultado da divisão é:' );
 // ?
+console.log( 'O resultado da divisão é:' + division(callback) );
 
-console.log( 'O resto da divisão é:' );
 // ?
+console.log( 'O resto da divisão é:' + mod(callback) );

@@ -83,8 +83,17 @@ para a chamada à `calculator` acima.
 uma função anônima que irá retornar a soma dos dois números que essa função
 anônima tem como seus argumentos.
 */
-console.log( 'O resultado da soma é:' );
 // ?
+let callback = function( x, y ){
+    return x + y;
+}
+
+let calculator = function( x, y ) {
+    return function( callback ){
+        return callback( x, y )
+    }
+}
+console.log( 'O resultado da soma é: ' + sum(callback) );
 
 /*
 Agora declare outra variáveis chamadas `subtraction`, `multiplication`,

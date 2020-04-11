@@ -84,15 +84,10 @@ uma função anônima que irá retornar a soma dos dois números que essa funç�
 anônima tem como seus argumentos.
 */
 // ?
-let callback = function( x, y ){
-    return x + y;
-}
+let callback = ( x, y ) => x + y;
 
-let calculator = function( x, y ) {
-    return function( callback ){
-        return callback( x, y )
-    }
-}
+let calculator = ( x, y ) => callback( x, y )
+
 console.log( 'O resultado da soma é: ' + sum(callback) );
 
 /*

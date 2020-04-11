@@ -61,12 +61,18 @@ por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
 que foram passadas para a primeira função `calculator`.
 */
 // ?
+let calculator = function( x, y ) {
+    return function( callback ){
+        return callback( x, y )
+    }
+}
 
 /*
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
 */
 // ?
+let sum = calculator(30, 40)
 
 /*
 Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de

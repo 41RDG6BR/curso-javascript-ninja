@@ -61,7 +61,10 @@
     - O desafio é fazer o retorno sem usar "if" ou "switch".
     */
     // ?
-    isOperatorValid = value => (['+', '-', '*', '%', '/'].indexOf(value) > -1);
+    isOperatorValid = operator => (['+', '-', '*', '%', '/'].indexOf(operator) > -1);
+    console.log(isOperatorValid('/'))
+    console.log( operation['+'])
+    console.log( operation['x'])
 
     /*
     Agora vamos criar a calculadora.
@@ -77,7 +80,15 @@
     */
     // ?
     let calculator = function( operator ) {
-        
+        if(!isOperatorValid( operator ) ){
+            return false;
+        }
+        return function( x, y ){
+            if( typeof x !== 'number' && typeof y 'number' ){
+                return false;
+            }
+        return operation[ operator ]( x, y );
+        }
     }
 
     /*

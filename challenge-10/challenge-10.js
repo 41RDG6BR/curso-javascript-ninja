@@ -27,21 +27,11 @@
     */
     // ?
     let operation = {
-        sum: function(x,y) {
-            return x + y;
-        },
-        subtraction: function(x,y) {
-            return x - y;
-        },
-        multiplication: function(x,y) {
-            return x * y;
-        },
-        division: function(x,y) {
-            return x / y;
-        },        
-        mod: function(x,y) {
-            return x % y;
-        }
+        sum: (x,y) => x + y,
+        subtraction: (x,y) => x - y,
+        multiplication: (x,y) => x * y,
+        division: (x,y) => x / y,        
+        mod: (x,y) => x % y
     }
     /*
     Crie uma função chamada `isOperatorValid`, que receberá um operador por

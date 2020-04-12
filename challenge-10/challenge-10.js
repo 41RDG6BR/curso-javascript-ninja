@@ -32,7 +32,24 @@
         multiplication: (x,y) => x * y,
         division: (x,y) => x / y,        
         mod: (x,y) => x % y
+    };
+
+    let operation = {
+        '+': function ( x, y ) {},
+        '-': function ( x, y ) {},
+        '*': function ( x, y ) {},
+        '/': function ( x, y ) {},
+        '%': function ( x, y ) {}
     }
+
+    let operation = {
+        '+': ( x, y ) => x + y,
+        '-': ( x, y ) => x - y,
+        '*': ( x, y ) => x * y,
+        '/': ( x, y ) => x / y,
+        '%': ( x, y ) => x % y
+    }
+    
     /*
     Crie uma função chamada `isOperatorValid`, que receberá um operador por
     parâmetro.
@@ -44,7 +61,7 @@
     - O desafio é fazer o retorno sem usar "if" ou "switch".
     */
     // ?
-    isOperator = value => (['+', '-', '*', '%', '/'].indexOf(value) > -1);
+    isOperatorValid = value => (['+', '-', '*', '%', '/'].indexOf(value) > -1);
 
     /*
     Agora vamos criar a calculadora.
@@ -59,6 +76,9 @@
     os dois parâmetros da função de retorno de "calculator".
     */
     // ?
+    let calculator = function( operator ) {
+        
+    }
 
     /*
     Crie uma função chamada "showOperationMessage" que recebe três parâmetros:

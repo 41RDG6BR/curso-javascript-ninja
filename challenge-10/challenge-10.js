@@ -35,14 +35,6 @@
     };
 
     let operation = {
-        '+': function ( x, y ) {},
-        '-': function ( x, y ) {},
-        '*': function ( x, y ) {},
-        '/': function ( x, y ) {},
-        '%': function ( x, y ) {}
-    }
-
-    let operation = {
         '+': ( x, y ) => x + y,
         '-': ( x, y ) => x - y,
         '*': ( x, y ) => x * y,
@@ -99,6 +91,9 @@
     Essa função mostrará a mensagem da operação que criaremos mais abaixo.
     */
     // ?
+    showOperationMessage = function(operador, number1, number2){
+        return  'A operação ' + number1 + operador + number2 + ' ='; 
+    }
 
     /*
     Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
@@ -108,6 +103,10 @@
     */
     // ?
 
+    function showErrorMessage(operator){
+        if(!isOperatorValid = operator => (['+', '-', '*', '%', '/'].indexOf(operator) > -1))
+           return 'Operação ' + operator + ' não permitida!'
+    }
     /*
     Nossa calculadora está pronta! Agora vamos testá-la:
     PASSO 1:

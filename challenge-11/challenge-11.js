@@ -7,14 +7,25 @@ loop, mostre no console a mensagem:
 'Entrou ao menos uma vez!'
 Qual loop você deve usar para que essa mensagem seja mostrada no console?
 */
-// ?
-//Resolvendo desafio
+;(retornaSeVerdade = () => {
+    const once = false;
+    if(once === true) return console.log('true')    
+    
+    console.log('Entrou ao menos uma vez!')
+    
+})()
+
 /*
 Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
 */
-// ?
+const person = {
+    name :'Rodrigo', 
+    age: 33, 
+    weight: 65,
+    birthday: 'september'
+}
 
 /*
 Use um loop para percorrer o objeto criado acima, mostrando no console
@@ -25,7 +36,9 @@ esse objeto tem.
 Após o loop, mostre a frase:
 'The person has [COUNTER] properties'
 */
-// ?
+for (const prop in person){
+    console.log(`The ${prop} of person is ${person[prop]}`)
+}
 
 /*
 Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
@@ -34,8 +47,19 @@ Se verdadeiro, retornar `true`. Senão, retornar false.
 Após a função, mostrar a mensagem no console:
 'The person has more than 25 years old? [TRUE/FALSE]'
 */
-// ?
+function moreThan() {
+    if (person.age > 25) {
+        console.log('The person has more than 25 years old?', true)
+    }else{
+        console.log('The person has more than 25 years old?', false)
+    }
+}
 
+moreThan = (age) => {
+    person.age = age;
+    if (person.age > 25)return  console.log('The person has more than 25 years old?', true)
+        console.log('The person has more than 25 years old?', false)
+}
 /*
 Faça um loop de 0 a 20, que adicione cada número como um item de um
 array chamado `numbers`. Se o contador for maior que 10, saia do loop.
